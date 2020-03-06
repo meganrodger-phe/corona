@@ -1,0 +1,62 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">
+        We're sorry to hear you've developed symptoms?
+        <span class="govuk-caption-xl">{{releaseVersion}}</span>
+      </h1>{{releaseVersion | log }}
+<h2 class="govuk-heading-m">
+      When did the symptoms first present? </h2>
+
+  <form class="form" action="/symptoms" method="post">
+
+    <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="symptoms-date-hint">
+    <span id="symptoms-date-hint" class="govuk-hint">
+      For example, 28 02 2020
+    </span>
+    <div class="govuk-date-input" id="symptoms-date">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="symptoms-date-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="symptoms-date-day" name="symptoms-date-day" type="text" pattern="[0-9]*" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="symptoms-date-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="symptoms-date-month" name="symptoms-date-month" type="text" pattern="[0-9]*" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="symptoms-date-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="symptoms-date-year" name="symptoms-date-year" type="text" pattern="[0-9]*" inputmode="numeric">
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+  <button class="govuk-button" data-module="govuk-button">
+  Save and Continue
+  </button>
+</div>
+
+
+
+{% endblock %}
