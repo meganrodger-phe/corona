@@ -7,7 +7,7 @@
 
 {% block content %}
 
-<form class="form" action="activites" method="post">
+<form class="form" action="activity-details" method="post">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <a href="#" class="govuk-back-link">Back</a>
@@ -31,26 +31,81 @@
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
         <label class="govuk-label govuk-radios__label" for="where-do-you-live">
-          England
+          Airplane travel
         </label>
       </div>
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
         <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
-          Scotland
+          A Healthcare setting
         </label>
       </div>
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
         <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
-          Wales
+          On public transport
         </label>
       </div>
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
         <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
-          Northern Ireland
+          Other out of home setting
         </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+<fieldset class="govuk-fieldset">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+    <h1 class="govuk-fieldset__heading">
+      Activity description
+    </h1>
+  </legend>
+
+  <div class="govuk-form-group">
+  <span id="more-detail-hint" class="govuk-hint">
+  Please supply a brief summary of where you were, including necessary details e.g. address. You'll be able to record any contacts there on the next screen.
+  </span>
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+</div>
+
+</fieldset>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+        When was this?
+      </h1>
+    </legend>
+    <span id="passport-issued-hint" class="govuk-hint">
+      For example, 04 03 2020
+    </span>
+    <div class="govuk-date-input" id="passport-issued">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric">
+        </div>
       </div>
     </div>
   </fieldset>
@@ -58,10 +113,12 @@
 
 
 
-  <button class="govuk-button" data-module="govuk-button">
-I've added everyone
+  <button class="govuk-button" data-module="govuk-button" style="margin-right: 8px;">
+Save and continue
   </button>
-
+  <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+    Skip for now
+  </button>
 
 </div>
 </div>

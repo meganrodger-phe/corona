@@ -1,0 +1,93 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<form class="form" action="contact-preferences" method="post">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <a href="#" class="govuk-back-link">Back</a>
+      <h1 class="govuk-heading-l">
+        Activity details
+      </h1>
+
+
+<table class="govuk-table">
+  <caption class="govuk-table__caption">Activity you supplied</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Date</th>
+      <td class="govuk-table__cell">March 11, 2020</td>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Category</th>
+      <td class="govuk-table__cell">Other out of home</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Description</th>
+      <td class="govuk-table__cell">Friend's brithday at their house</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 class="govuk-heading-m">
+  Contacts
+</h1>
+<p class="govuk-body-m">Please now fill in any contacts from this activity where known:</p>
+
+</div>
+<div class="govuk-grid-column-full">
+<table class="govuk-table">
+  <caption class="govuk-table__caption">People you have lived with</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Forename</th>
+      <th scope="col" class="govuk-table__header">Surname</th>
+      <th scope="col" class="govuk-table__header">Email</th>
+      <th scope="col" class="govuk-table__header">Phone</th>
+      <th scope="col" class="govuk-table__header"></th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Megan</td>
+      <td class="govuk-table__cell">Rodger</td>
+      <td class="govuk-table__cell">megan.rodger@phe.gov.uk</td>
+      <td class="govuk-table__cell">07922 371937</td>
+      <td class="govuk-table__cell">  <a href="">
+        edit
+      </a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell"><input class="govuk-input " id="address-line-2" name="address-line-2" type="text">
+</td>
+      <td class="govuk-table__cell"><input class="govuk-input" id="address-line-2" name="address-line-2" type="text"></td>
+      <td class="govuk-table__cell"><input class="govuk-input" id="address-line-2" name="address-line-2" type="text"></td>
+      <td class="govuk-table__cell"><input class="govuk-input" id="address-line-2" name="address-line-2" type="text"></td>
+      <td class="govuk-table__cell">  <a href="activity-details-added" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+        Add
+      </a></td>
+    </tr>
+  </tbody>
+</table>
+
+
+  <button class="govuk-button" data-module="govuk-button" style="margin-right: 8px;">
+Add another activity
+  </button>
+  <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+    I've added everything I can for now
+  </button>
+
+</div>
+</div>
+
+</form>
+
+{% endblock %}
