@@ -74,17 +74,43 @@ COVID-19 prototype
       <label class="govuk-label" for="address-postcode">
         Email address
       </label>
-      <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
+      <input class="govuk-input govuk-!-width-two-thirds" id="address-postcode" name="address-postcode" type="text">
     </div>
 
     <div class="govuk-form-group">
       <label class="govuk-label" for="address-postcode">
-        Phone number
+        Phone number (preferably mobile)
       </label>
-      <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
+      <span id="changed-name-hint" class="govuk-hint">
+   For example, 01632 960 001, 07700 900982 or (0044) 7700 900982
+ </span>
+      <input class="govuk-input govuk-!-width-two-thirds" id="address-postcode" name="address-postcode" type="text">
     </div>
 
   </fieldset>
+  <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+      <h1 class="govuk-fieldset__heading">
+        Would you describe yourself as a healthcare worker?
+      </h1>
+    </legend>
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+          No, I don't work in healthcare
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+          Yes, I do work in healthcare
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
 
   <button class="govuk-button" data-module="govuk-button">
   Save and continue

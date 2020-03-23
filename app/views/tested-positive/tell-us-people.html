@@ -1,0 +1,61 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<form class="form" action="tell-us-people" method="post">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">
+        Tell us about people you have been living with
+      </h1>
+<p class="govuk-body-m">Please can you provide details of the people that you have been living with for any day since the <strong>25th February</strong> (2 days before you first reported symptoms).</p>
+<p class="govuk-body-m">It will be important that we are able to get in touch with all the people you are able to identify for us so that we can give them advice to keep themselves safe, know how and when to access testing and to avoid passing the infection onto others.</p>
+<p class="govuk-body-m">Please enter the names even if they don't all have their own email addresses and phone numbers. If it is more appropriate for one member of the family e.g. parents of young children, to receive this information on behalf of other household members then please enter the email address and phone number for that person instead here.</p>
+
+</div>
+<div class="govuk-grid-column-full">
+<table class="govuk-table">
+  <caption class="govuk-table__caption">People you have lived with</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Forename</th>
+      <th scope="col" class="govuk-table__header">Surname</th>
+      <th scope="col" class="govuk-table__header">Email</th>
+      <th scope="col" class="govuk-table__header">Phone</th>
+      <th scope="col" class="govuk-table__header"></th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">First 6 weeks</td>
+      <td class="govuk-table__cell">£109.80 per week</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Next 33 weeks</td>
+      <td class="govuk-table__cell">£109.80 per week</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Total estimated pay</td>
+      <td class="govuk-table__cell">£4,282.20</td>
+    </tr>
+  </tbody>
+</table>
+
+
+  <button class="govuk-button" data-module="govuk-button">
+  Continue
+  </button>
+
+  <p class="govuk-body-m">If you have any questions or concerns, you should call NHS 111 or visit <a href="">NHS 111 online</a>
+
+
+</div>
+
+</form>
+
+{% endblock %}
