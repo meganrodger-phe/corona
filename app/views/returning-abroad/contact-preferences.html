@@ -1,0 +1,52 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<form class="form" action="thank-you-info" method="post">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <a href="#" class="govuk-back-link">Back</a>
+      <h1 class="govuk-heading-l">
+        Contact preferences
+      </h1>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h2 class="govuk-fieldset__heading">
+              Would you be happy for us to contact you again if further information is required?
+            </h2>
+          </legend>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+              <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                Yes, I am happy to be contacted again
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+              <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                No, I do not want to be contacted again
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+
+
+
+        <button class="govuk-button" data-module="govuk-button">
+        Continue
+        </button>
+</div>
+</div>
+
+</form>
+
+{% endblock %}

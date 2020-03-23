@@ -55,3 +55,16 @@ else {
 }
 
 })
+
+router.post('/returning-abroad/symptoms-contact', function (req, res) {
+
+let symptoms_q = req.session.data['symptoms_q']
+
+if (symptoms_q === 'no_symptoms') {
+  res.redirect('/returning-abroad/thank-you-helping')
+}
+else {
+  res.redirect('/returning-abroad/symptoms-contact')
+}
+
+})
