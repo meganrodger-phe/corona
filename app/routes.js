@@ -6,7 +6,7 @@ const router = express.Router()
 module.exports = router
 
 // Branching
-router.post('/tested-positive/symptoms', function (req, res) {
+router.post('/v1/tested-positive/symptoms', function (req, res) {
   // Get the answer from session data
   // The name between the quotes is the same as the 'name' attribute on the input elements
   // However in JavaScript we can't use hyphens in variable names
@@ -15,56 +15,56 @@ router.post('/tested-positive/symptoms', function (req, res) {
   let statements = req.session.data['statements']
 
   if (statements === 'results') {
-    res.redirect('/awaiting-results/symptoms-waiting')
+    res.redirect('/v1/awaiting-results/symptoms-waiting')
 
   } else if (statements === 'contact') {
-    res.redirect('/contact-of/self-isolate-q')
+    res.redirect('/v1/contact-of/self-isolate-q')
 
   } else if (statements === 'traveller')  {
-    res.redirect('/returning-abroad/self-isolate')
+    res.redirect('/v1/returning-abroad/self-isolate')
   }
   else {
-    res.redirect('/tested-positive/symptoms')
+    res.redirect('/v1/tested-positive/symptoms')
   }
 
 })
 
 
-router.post('/contact-of/self-isolate', function (req, res) {
+router.post('/v1/contact-of/self-isolate', function (req, res) {
 
 let self_isolate = req.session.data['self_isolate']
 
 if (self_isolate === 'no-not') {
-  res.redirect('/contact-of/contact-preferences')
+  res.redirect('/v1/contact-of/contact-preferences')
 }
 else {
-  res.redirect('/contact-of/self-isolate')
+  res.redirect('/v1/contact-of/self-isolate')
 }
 
 })
 
-router.post('/contact-of/symptoms-contact', function (req, res) {
+router.post('/v1/contact-of/symptoms-contact', function (req, res) {
 
 let symptoms_q = req.session.data['symptoms_q']
 
 if (symptoms_q === 'no_symptoms') {
-  res.redirect('/contact-of/thank-you-helping')
+  res.redirect('/v1/contact-of/thank-you-helping')
 }
 else {
-  res.redirect('/contact-of/symptoms-contact')
+  res.redirect('/v1/contact-of/symptoms-contact')
 }
 
 })
 
-router.post('/returning-abroad/symptoms-contact', function (req, res) {
+router.post('/v1/returning-abroad/symptoms-contact', function (req, res) {
 
 let symptoms_q = req.session.data['symptoms_q']
 
 if (symptoms_q === 'no_symptoms') {
-  res.redirect('/returning-abroad/thank-you-helping')
+  res.redirect('/v1/returning-abroad/thank-you-helping')
 }
 else {
-  res.redirect('/returning-abroad/symptoms-contact')
+  res.redirect('/v1/returning-abroad/symptoms-contact')
 }
 
 })
