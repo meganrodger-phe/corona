@@ -1,0 +1,70 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<form class="form" action="symptoms-contact" method="post">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <a href="#" class="govuk-back-link">Back</a>
+      <h1 class="govuk-heading-l">
+        Megan, thank you for the information so far
+      </h1>
+
+      <p class="govuk-body-m">So that we can continue to look after you, we're asking you to update us daily for the next 14 days whether you are experiencing any of the following symptoms:
+        <ul class="govuk-list govuk-list--bullet">
+          <li>a cough (with or without fever)</li>
+          <li>a fever with no other symptoms</li>
+          <li>a shortness of breath (difficulty breathing in children)</li>
+        </ul>
+      </p>
+
+      <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+        How are you feeling?
+      </h1>
+    </legend>
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live" name="symptoms_q" type="radio" value="no_symptoms">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+          I do not have any of these symptoms
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-2" name="symptoms_q" type="radio" value="yes_symptoms">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+          I have at least one of the symptoms listed above
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+<h2 class="govuk-heading-m">Further guidance</h2>
+<p class="govuk-body-m">If you would like any further guidance or advice, please follow the links below:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li><a href="">NHS: answers to common questions about the coronavirus</a></li>
+  <li><a href="">GOV.UK information on coronavirus and the situation in the UK</a></li>
+  <li><a href="">GOV.UK foreign travel advice</a></li>
+</ul>
+
+
+
+
+
+        <button class="govuk-button" data-module="govuk-button">
+        Continue
+        </button>
+</div>
+</div>
+
+</form>
+
+{% endblock %}
